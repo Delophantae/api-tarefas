@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const tarefa = require('./models/tarefa');
+require('dotenv').config();
 app.use((req, res, next) => {
  res.setHeader("Access-Control-Allow-Origin", "*");
  res.setHeader('Access-Control-Allow-Methods', 'HEAD, GET, POST, PATCH, DELETE');
@@ -21,11 +23,11 @@ app.listen(PORT, () => {
 // Obtendo os parametros passados pela linha de comando
 //var userArgs = process.argv.slice(2);
 // var mongoURL = userArgs[0]; //tf
-var mongoURL = "mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+//var mongoURL = "mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 //Configurando a conexao com o Banco de Dados
 var mongoose = require('mongoose');
-mongoose.connect(mongoURL);
+mongoose.connect(process.env.MONGO_URI);
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', (error) => {
@@ -34,3 +36,7 @@ db.on('error', (error) => {
 db.once('connected', () => {
  console.log('Database Connected');
 })
+
+// isso tava no package.json
+//, 
+    //"vercel-build": "node index.js 'mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'"

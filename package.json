@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js 'mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'"
+    "vercel-build": "node index.js 'mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'"
   },
   "author": "",
   "license": "ISC",

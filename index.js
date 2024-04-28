@@ -23,7 +23,6 @@ app.listen(PORT, () => {
 // Obtendo os parametros passados pela linha de comando
 //var userArgs = process.argv.slice(2);
 // var mongoURL = userArgs[0]; //tf
-//var mongoURL = "mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 //Configurando a conexao com o Banco de Dados
 var mongoose = require('mongoose');
@@ -37,6 +36,3 @@ db.once('connected', () => {
  console.log('Database Connected');
 })
 
-// isso tava no package.json
-//, 
-    //"vercel-build": "node index.js 'mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'"

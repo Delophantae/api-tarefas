@@ -19,8 +19,10 @@ app.listen(PORT, () => {
  console.log(`Server Started at ${PORT}`)
 })
 // Obtendo os parametros passados pela linha de comando
-var userArgs = process.argv.slice(2);
-var mongoURL = userArgs[0];
+//var userArgs = process.argv.slice(2);
+// var mongoURL = userArgs[0]; //sem linha de comando nessa porra
+var mongoURL = "mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 //Configurando a conexao com o Banco de Dados
 var mongoose = require('mongoose');
 mongoose.connect(mongoURL);

@@ -1,6 +1,0 @@
-Estava na index
-
-//var mongoURL = "mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-// isso tava no package.json
-//, 
-    //"vercel-build": "node index.js 'mongodb+srv://guiweck:gaming@cluster0.alwh6fm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'"
